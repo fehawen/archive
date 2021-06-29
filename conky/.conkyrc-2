@@ -1,0 +1,43 @@
+conky.config = {
+    alignment = 'top_left',
+    background = true,
+    default_color = '#24292e',
+    font = 'monospace:pixelsize=35',
+    font1 = 'icofont:pixelsize=40',
+    draw_shades = false,
+    draw_outline = false,
+    draw_borders = false,
+    gap_x = 90,
+    gap_y = 90,
+    out_to_console = false,
+    out_to_ncurses = false,
+    out_to_stderr = false,
+    out_to_x = true,
+    own_window = false,
+    own_window_type = 'override',
+    own_window_transparent = true,
+    own_window_argb_visual = true,
+    own_window_argb_value = 0,
+    update_interval = 1,
+    double_buffer = true,
+    use_xft = true,
+}
+
+conky.text = [[
+${font1} ${font}${time %H:%M:%S}
+${font1} ${font}${time %A %d %B}
+
+${font1} ${font}${wireless_essid wlp2s0}
+${font1} ${font}${gw_ip}
+${font1} ${font}${addr wlp2s0}
+
+${font1} ${font}${upspeed wlp2s0}
+${font1} ${font}${downspeed wlp2s0}
+
+${font1} ${font}${fs_used /} (${fs_size})
+${font1} ${font}${swap} (${swapmax})
+${font1} ${font}${mem} (${memmax})
+${font1} ${font}${cpu}% (${freq_g} GHz)
+
+${font1} ${font}${battery_percent}%
+]];
